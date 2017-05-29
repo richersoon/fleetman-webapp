@@ -3,7 +3,7 @@ node {
       git 'https://github.com/richersoon/fleetman-webapp.git'
    }
    stage('Build') {
-      sh "mvn -Dmaven.test.failure.ignore clean package"
+      sh "mvn clean package"
    }
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
